@@ -119,7 +119,7 @@ export default {
             art_con: "",
             u_id: JSON.parse(localStorage.getItem("userInfo")).data.id,
           };
-          this.$router.push({ path: "/release", query: "" });
+          this.$router.push({ path: "/center/release", query: "" });
         } else {
           alert(res.message);
         }

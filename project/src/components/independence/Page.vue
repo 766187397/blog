@@ -67,6 +67,7 @@ export default {
         : (this.currentPage_item += 1);
       this.$emit("Pageitem", this.currentPage_item);
       this.get();
+      window.scrollTo(0, 0);
       // console.log(this.currentPage_item);
     },
     // 上一页
@@ -76,6 +77,7 @@ export default {
         : (this.currentPage_item -= 1);
       this.$emit("Pageitem", this.currentPage_item);
       this.get();
+      window.scrollTo(0, 0);
       //   console.log(this.currentPage_item);
     },
     // 点击页
@@ -83,6 +85,7 @@ export default {
       this.currentPage_item = v;
       this.$emit("Pageitem", this.currentPage_item);
       this.get();
+      window.scrollTo(0, 0);
       //   console.log(this.currentPage_item);
     },
     // 首页
@@ -90,12 +93,14 @@ export default {
       this.currentPage_item = 1;
       this.$emit("Pageitem", this.currentPage_item);
       this.get();
+      window.scrollTo(0, 0);
     },
     // 尾页
     back() {
       this.currentPage_item = this.PageNum_item;
       this.$emit("Pageitem", this.currentPage_item);
       this.get();
+      window.scrollTo(0, 0);
     },
   },
   watch: {

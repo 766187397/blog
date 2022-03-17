@@ -23,6 +23,5 @@ new Vue({
 
 // 导航条回到顶部
 router.afterEach((to, from, next) => {
-    window,
-    scrollTo(0, 0)
+    window.scrollTo(0, 0)
 })
