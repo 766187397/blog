@@ -3,7 +3,11 @@
     <!-- 导航 -->
     <my-nav></my-nav>
     <!-- 内容 -->
-    <div class="content"><router-view /></div>
+    <div class="content">
+      <transition name="slide-left" mode="out-in">
+        <router-view />
+      </transition>
+    </div>
     <!-- 页脚 -->
     <my-footer></my-footer>
     <!-- 回到顶部 -->
@@ -71,5 +75,21 @@ body {
   .content {
     width: 100%;
   }
+}
+.slide-left-enter {
+  opacity: 0;
+  -webkit-transform: translate(30px, 0);
+  transform: translate(30px, 0);
+}
+.slide-left-enter-active {
+  transition: all 0.5s ease;
+}
+.slide-left-leave-to {
+  opacity: 0;
+  -webkit-transform: translate(-30px, 0);
+  transform: translate(-30px, 0);
+}
+.slide-left-leave-active {
+  transition: all 0.5s ease;
 }
 </style>
